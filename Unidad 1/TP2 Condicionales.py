@@ -1,3 +1,17 @@
+#Ejercicio 1
+#Escribir un programa que solicite la edad del usuario. Si el usuario es mayor de 18 años, deberá mostrar un mensaje en pantalla que diga “Es mayor de edad”.
+edad=int (input("Ingrese su edad"))
+if edad > 18:
+    print ("Es mayor de edad")
+
+#Ejercicio 2
+#Escribir un programa que solicite su nota al usuario. Si la nota es mayor o igual a 6, deberá mostrar por pantalla un mensaje que diga “Aprobado”; en caso contrario deberá mostrar el mensaje “Desaprobado”.
+nota= int (input "Ingrese una nota")
+if nota >= 6:
+    print ("Aprobado")
+else:
+    print ("Desaprobado")
+
 #Ejercicio 3
 #Escribir un programa que permita ingresar solo números pares. Si el usuario ingresa un número par, imprimir por en pantalla el mensaje "Ha ingresado un número par"; en caso contrario, imprimir por pantalla "Por favor, ingrese un número par"
 numero = int(input("Ingrese un número par: "))
@@ -47,6 +61,7 @@ if frase[-1].lower() in 'aeiou':
     print(frase, "!")
 else:
     print(frase)
+
 #Ejercicio 8
 #Escribir un programa que solicite al usuario que ingrese su nombre y el número 1, 2 o 3 dependiendo de la opción que desee:
 nombre= input("Ingrese su nombre: ")
@@ -87,7 +102,7 @@ if hemisferio.lower() == "norte":
     else:
         print("fecha no válida")
 if hemisferio.lower() == "sur":
-            if (mes.lower() == "junio" and dia >= 21) or (mes.lower() in ["julio", "agosto"]) or (mes.lower() == "septiembre" and dia < 20):
+            if (mes.lower() == "junio" and dia >= 21) or (mes.lower() in ["julio", "agosto"]) or (mes.lower() == "septiembre" and dia <= 20):
                 print("Es invierno")
             elif (mes.lower() == "septiembre" and dia >= 21) or (mes.lower() in ["octubre", "noviembre"]) or (mes.lower() == "diciembre" and dia <=20):
                 print("Es primavera")
@@ -96,6 +111,7 @@ if hemisferio.lower() == "sur":
             elif (mes.lower() == "marzo" and dia >= 21) or (mes.lower() in ["abril", "mayo"]) or (mes.lower() == "junio" and dia <= 20):
                 print("Es otoño")
             else:
-                print("fecha no válida"):
+                print("fecha no válida")
+
     
 
