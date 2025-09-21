@@ -46,3 +46,20 @@ for n in list:
        duplicado.append(n)
 print (duplicado)
 
+#Ejercicio 5 (corregir)
+nom_asistencia= ["Jorge", "Nadia", "Mariana", "Monica", "Sofia", "Alvaro", "Matias", "Jorgelina"]
+asistencia= []
+for i in range (8):
+   print (nom_asistencia[i])
+   presente= ( input ("Ingrese si el alumno estuvo presente o ausente "), nom_asistencia[i] )
+   if presente == "si":
+       asistencia.append (nom_asistencia[i])
+retiro= ( input ("Ingrese el nombre del alumno que se retiro de la clase"))
+if retiro in "ninguno":
+   print (("Los alumnos presentes fueron :"), (asistencia) )
+else:   
+ asistencia.remove (retiro)
+nuevo_alumno= ( input ("Ingrese el nombre del alumno que ingreso a la clase")) 
+asistencia.append (nuevo_alumno)
+print (("Los alumnos presentes fueron :"), (asistencia) )
+
