@@ -104,5 +104,80 @@ print(f" El promedio en Música es: {statistics.mean([notas[e][0] for e in range
 print(f" El promedio en Percusión es: {statistics.mean([notas[e][1] for e in range(5)]):.2f}")
 print(f" El promedio en Canto es: {statistics.mean([notas[e][2] for e in range(5)]):.2f}")
 
+#Ejercicio 9
+# Creo un tablero vacío con espacios
+tablero = [[" ", " ", " "], [" ", " ", " "], [" ", " ", " "]]
+# Inicializo el tablero con guiones "-"
+for i in range(3):
+    for j in range(3):
+        tablero[i][j] = "-"
+# Turnos: máximo 9 (voy reemplazando guiones por X y O)
+for turno in range(9):
+    # Determino el jugador
+    if turno % 2 == 0:
+        jugador = "X"
+    else:
+        jugador = "O"
+
+    # Solicito jugada al jugador
+    jugada = input("Ingrese su jugada (0 a 2) separando con una coma " + jugador + " (fila,columna): ")
+
+    # Convertir entrada en dos números: fila y columna
+    fila, columna = map(int, jugada.split(","))
+
+    # Verifico si la casilla está libre
+    if tablero[fila][columna] == "-":
+        tablero[fila][columna] = jugador
+    else:
+        print("¡Casilla ocupada! Pierdes el turno.")
+        continue
+ # Mostrar el tablero actualizado
+    for f in tablero:
+        print(" ".join(f))
+    print()
+
+#Ejercicio 10
+productos = ["leche", "pan", "queso", "salame"]
+dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
+ventas = []
+
+print("Ingrese la cantidad vendida por cada producto en cada día:")
+
+for p in productos:
+    ventas_producto = []
+    for dia in dias:
+        while True:
+            cantidad = input(f"Ingrese cantidad de '{p}' vendida el {dia}: ")
+            if cantidad.replace(".", "", 1).isdigit():
+                cantidad = float(cantidad)
+                if cantidad >= 0:
+                    cantidad_entera = round(cantidad)
+                    ventas_producto.append(cantidad_entera)
+                    break
+                else:
+                    print("El número no puede ser negativo.")
+            else:
+                print("Debe ingresar un número válido (positivo).")
+    ventas.append(ventas_producto)
+
+# Total vendido por producto
+print("Total vendido por producto:")
+for i, p in enumerate(productos):
+    total = sum(ventas[i])
+    print(f"  {p}: {total} unidades")
+
+# Día con mayores ventas totales
+ventas_dia = [0] * 7
+for i in range(7):  # Días
+    for j in range(4):  # Productos
+        ventas_dia[i] += ventas[j][i]
+
+indice_dia_mayor = ventas_dia.index(max(ventas_dia))
+print(f"El día con mayores ventas fue el {dias[indice_dia_mayor]} con {ventas_dia[indice_dia_mayor]} unidades vendidas.")
+
+# Producto más vendido en la semana
+totales_productos = [sum(producto) for producto in ventas]
+indice_producto_mayor = totales_productos.index(max(totales_productos))
+print(f"El producto más vendido fue '{productos[indice_producto_mayor]}' con {totales_productos[indice_producto_mayor]} unidades.")
 
 
