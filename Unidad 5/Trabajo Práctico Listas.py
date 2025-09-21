@@ -69,12 +69,6 @@ for n in reversa:
 print (slicing)
 
 #Ejercicio 7
-temp_max= []
-temp_min= []
-for t in range (7):
-    temp= (float ( input "Ingrese la temperatura máxima del día: "))
-
-#Ejercicio 8
 import statistics
 temp_max= []
 temp_min= []
@@ -94,7 +88,21 @@ print (f" La temperatura máxima promedio fue de {mean_max} °C")
 print (f" La temperatura mínima promedio fue de {mean_min} °C")
 print (f" El día de mayor amplitud térmica fue el {dia_amplitud} con una amplitud de {amplitud} °C ")
 
-#Ejercicio 9
+#Ejercicio 8
+import statistics
+estudiantes = ["Marco", "Diana", "Marilu", "Facundo", "Antonio"]
+notas = [(5, 7, 4), (10, 9, 7), (8, 6, 9), (4, 2, 5), (7, 8, 3)]
+materias = ["Música", "Percusión", "Canto"]
+for m in range(3):
+    print(f" La materia es: {materias[m]}")
+    for e in range(5):
+        print(f" Estudiante: {estudiantes[e]}")
+        print(f" Nota: {notas[e][m]}")
+        promedio_estudiante = statistics.mean(notas[e])
+        print(f" El Promedio general de {estudiantes[e]}: {promedio_estudiante:.2f}")
+print(f" El promedio en Música es: {statistics.mean([notas[e][0] for e in range(5)]):.2f}")
+print(f" El promedio en Percusión es: {statistics.mean([notas[e][1] for e in range(5)]):.2f}")
+print(f" El promedio en Canto es: {statistics.mean([notas[e][2] for e in range(5)]):.2f}")
 
 
 
