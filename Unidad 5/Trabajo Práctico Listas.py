@@ -62,3 +62,39 @@ if retiro.lower() != "ninguno":
 
 print(" Los alumnos presentes fueron:", asistencia)
 
+#Ejercicio 6
+reversa= [ 100, 33, 96, 15, 22 ,-15 , 74 ]
+for n in reversa:
+      slicing= reversa [::-1]
+print (slicing)
+
+#Ejercicio 7
+temp_max= []
+temp_min= []
+for t in range (7):
+    temp= (float ( input "Ingrese la temperatura máxima del día: "))
+
+#Ejercicio 8
+import statistics
+temp_max= []
+temp_min= []
+amplitudes= []
+dias_semana= ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
+for dia in dias_semana:
+         temp=  float ( input ("Ingrese la temperatura máxima del día: "))
+         temp_max.append (temp)
+         temp_minima= float ( input ("Ingrese la temperatura mínima del día: "))
+         temp_min.append (temp_minima)
+         amplitudes.append (temp - temp_minima)
+mean_max= statistics.mean (temp_max)
+mean_min= statistics.mean (temp_min)
+amplitud= max (amplitudes)
+dia_amplitud= dias_semana [amplitudes.index(amplitud)]
+print (f" La temperatura máxima promedio fue de {mean_max} °C")
+print (f" La temperatura mínima promedio fue de {mean_min} °C")
+print (f" El día de mayor amplitud térmica fue el {dia_amplitud} con una amplitud de {amplitud} °C ")
+
+#Ejercicio 9
+
+
+
