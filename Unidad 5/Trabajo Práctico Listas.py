@@ -37,3 +37,12 @@ for n in list_num:
 print (list_num)
 print ( ( "La cantidad de nros pares es :"), (len(pares) ) )
 print ( ( "La cantidad de nros impares es :"), (len(impares)) )
+
+#Ejercicio 4
+list=[1,3, 5, 3, 7, 1, 9 , 5, 3]
+duplicado= []
+for n in list:
+    if n not in duplicado:
+       duplicado.append(n)
+print (duplicado)
+
