@@ -45,4 +45,4 @@ while opcion!="3":
             print(f"El número binario {binario} en decimal es: {nro_decimal}")
     elif opcion==3:
             print("Salida exitosa. Gracias por usar el conversor")
-            
+            break
